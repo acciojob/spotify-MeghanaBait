@@ -11,6 +11,20 @@ public class SpotifyService {
 
     SpotifyRepository spotifyRepository = new SpotifyRepository();
 
+    public HashMap<Artist, List<Album>> artistAlbumMap = spotifyRepository.getArtistAlbumMap();
+    public HashMap<Album, List<Song>> albumSongMap = spotifyRepository.getAlbumSongMap();
+    public HashMap<Playlist, List<Song>> playlistSongMap = spotifyRepository.playlistSongMap;
+    public HashMap<Playlist, List<User>> playlistListenerMap = spotifyRepository.playlistListenerMap;
+    public HashMap<User, Playlist> creatorPlaylistMap = spotifyRepository.getCreatorPlaylistMap();
+    public HashMap<User, List<Playlist>> userPlaylistMap = spotifyRepository.getUserPlaylistMap();
+    public HashMap<Song, List<User>> songLikeMap = spotifyRepository.getSongLikeMap();
+
+    public List<User> users = spotifyRepository.getUsers();
+    public List<Song> songs = spotifyRepository.getSongs();
+    public List<Playlist> playlists = spotifyRepository.getPlaylists();
+    public List<Album> albums = spotifyRepository.getAlbums();
+    public List<Artist> artists = spotifyRepository.getArtists();
+
     public User createUser(String name, String mobile){
         return spotifyRepository.createUser(name,mobile);
     }

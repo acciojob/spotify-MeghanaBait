@@ -14,7 +14,7 @@ public class SpotifyController {
     @PostMapping("/add-user")
     public String createUser(@RequestParam(name = "name") String name, String mobile){
         //create the user with given name and number
-        spotifyService.createUser(name, mobile);
+        User user = spotifyService.createUser(name, mobile);
         return "Success";
     }
 
@@ -34,7 +34,7 @@ public class SpotifyController {
             return "Success";
         }
         catch (Exception e){
-            return "Falied to create album: " + e.getMessage();
+            return "Failed to create album: " + e.getMessage();
         }
 
     }

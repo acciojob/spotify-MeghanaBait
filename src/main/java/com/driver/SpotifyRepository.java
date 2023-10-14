@@ -37,6 +37,54 @@ public class SpotifyRepository {
         artists = new ArrayList<>();
     }
 
+    public HashMap<Artist, List<Album>> getArtistAlbumMap() {
+        return artistAlbumMap;
+    }
+
+    public HashMap<Album, List<Song>> getAlbumSongMap() {
+        return albumSongMap;
+    }
+
+    public HashMap<Playlist, List<Song>> getPlaylistSongMap() {
+        return playlistSongMap;
+    }
+
+    public HashMap<Playlist, List<User>> getPlaylistListenerMap() {
+        return playlistListenerMap;
+    }
+
+    public HashMap<User, Playlist> getCreatorPlaylistMap() {
+        return creatorPlaylistMap;
+    }
+
+    public HashMap<User, List<Playlist>> getUserPlaylistMap() {
+        return userPlaylistMap;
+    }
+
+    public HashMap<Song, List<User>> getSongLikeMap() {
+        return songLikeMap;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public List<Playlist> getPlaylists() {
+        return playlists;
+    }
+
+    public List<Album> getAlbums() {
+        return albums;
+    }
+
+    public List<Artist> getArtists() {
+        return artists;
+    }
+
     public User createUser(String name, String mobile) {
         User user = new User(name, mobile);
         users.add(user);
