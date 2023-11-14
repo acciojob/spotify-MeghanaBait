@@ -1,4 +1,4 @@
-package com.driver;
+package com.driver.Models;
 
 public class Song {
     private String title;

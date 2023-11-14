@@ -2,6 +2,7 @@ package com.driver;
 
 import java.util.*;
 
+import com.driver.Models.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

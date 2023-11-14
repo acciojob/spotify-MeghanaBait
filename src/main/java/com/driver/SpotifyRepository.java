@@ -2,6 +2,7 @@ package com.driver;
 
 import java.util.*;
 
+import com.driver.Models.*;
 import org.springframework.stereotype.Repository;
 
 @Repository
